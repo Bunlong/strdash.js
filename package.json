@@ -1,0 +1,31 @@
+{
+  "name": "strdash",
+  "version": "0.1.0",
+  "description": "An open-source JavaScript library for formatting and manipulating strings.",
+  "author": "Bunlong <bunlong.van@gmail.com>",
+  "main": "strdash.js",
+  "browser": "strdash.min.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bunlong/strdash.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Bunlong/strdash.js.git/issues"
+  },
+  "keywords": [
+    "strdash.js",
+    "format",
+    "string"
+  ],
+  "homepage": "https://github.com/Bunlong/strdash.js",
+  "scripts": {
+    "lint": "eslint --no-ignore strdash.js Gruntfile.js .eslintrc.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "grunt": "^1.4.1",
+    "grunt-contrib-uglify": "^5.0.1"
+  }
+}
