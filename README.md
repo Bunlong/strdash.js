@@ -2,6 +2,22 @@
 
 strdash.js is an open-source JavaScript library for formatting and manipulating strings.
 
+## 🔧 Install
+
+strdash.js is available on npm. It can be installed with the following command:
+
+```
+npm install strdash --save
+```
+
+strdash is available on yarn as well. It can be installed with the following command:
+
+```
+yarn add strdash --save
+```
+
+If you don't want to use npm or yarn, [numer.min.js](https://unpkg.com/strdash.js@0.1.0/strdash.min.js) can be downloaded to your project source.
+
 ## ❗ Issues
 
 If you think any of the `strdash.js` can be improved, please do open a PR with any updates and submit any issues. Also, I will continue to improve this, so you might want to watch/star this repository to revisit.
