@@ -1,3 +1,10 @@
+/* @license
+strdash
+v0.1.0
+https://github.com/bunlong/strdash
+License: MIT
+*/
+
 (function(root, factory) {
   /* globals define */
   if (typeof define === 'function' && define.amd) {
@@ -10,12 +17,54 @@
     module.exports = factory();
   } else {
     // Browser globals (root is window)
-    root.Numer = factory();
+    root.str = factory();
   }
 })(this, function() {
   'use strict';
 
-  var str = {};
+  function initialize (object, str) {
+    var str__ = str;
+    if (str__ !== null && str__ !== undefined) {
+      if (typeof str__ === 'string')
+        object.str__ = str__;
+      else
+        object.str__ = str__toString();
+    } else {
+      // null or undefined
+      object.str__ = str__;
+    }
 
-  return str;
+    // original object, currently only used by toCSV() and toBoolean()
+    object.orig__ = str__;
+
+    if (str__ !== null && str__ !== undefined) {
+      if (object.__defineGetter__) {
+        object.__defineGetter__('length', function() {
+          return object.str__.length;
+        })
+      } else {
+        object.length__ = str__.length;
+      }
+    } else {
+      object.length__ = -1;
+    }
+  }
+
+  function str(str) {
+    initialize(this, str);
+  }
+
+  str.prototype = {
+    isAlpha: isAlpha,
+  };
+
+  function isAlpha() {
+    return !/[^0-9a-z\xDF-\xFF]/.test(this.str__.toLowerCase());
+  }
+
+  function Export(s) {
+    return new str(s);
+  };
+
+  return Export;
 });
