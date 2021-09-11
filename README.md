@@ -67,6 +67,19 @@ console.log(str('ABC').isUpperCase());
 // expected output: true
 ```
 
+## 📜 Changelog
+
+Latest version 0.1.0 (2021-09-12):
+
+* isEmpty()
+* isNumeric()
+* isAlpha()
+* isAlphaNumeric() 
+* isLowerCase()
+* isUpperCase()
+
+Details changes for each release are documented in the [CHANGELOG.md](https://github.com/Bunlong/strdash/blob/master/CHANGELOG.md).
+
 ## ❗ Issues
 
 If you think any of the `strdash.js` can be improved, please do open a PR with any updates and submit any issues. Also, I will continue to improve this, so you might want to watch/star this repository to revisit.
