@@ -2,6 +2,8 @@
 
 strdash.js is an open-source JavaScript library for formatting and manipulating strings.
 
+[![NPM](https://img.shields.io/npm/v/strdash.svg)](https://www.npmjs.com/package/strdash) ![npm bundle size](https://img.shields.io/bundlephobia/min/strdash) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
 ## 🔧 Install
 
 strdash.js is available on npm. It can be installed with the following command:
