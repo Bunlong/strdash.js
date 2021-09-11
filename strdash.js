@@ -56,9 +56,14 @@ License: MIT
 
   str.prototype = {
     isAlpha: isAlpha,
+    isAlphaNumeric: isAlphaNumeric,
   };
 
   function isAlpha() {
+    return !/[^0-9a-z\xDF-\xFF]/.test(this.str__.toLowerCase());
+  }
+
+  function isAlphaNumeric() {
     return !/[^0-9a-z\xDF-\xFF]/.test(this.str__.toLowerCase());
   }
 
