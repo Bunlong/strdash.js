@@ -60,6 +60,7 @@ License: MIT
     isAlpha: isAlpha,
     isAlphaNumeric: isAlphaNumeric,
     isLowerCase: isLowerCase,
+    isUpperCase: isUpperCase,
   };
 
   function isEmpty() {
@@ -80,6 +81,10 @@ License: MIT
 
   function isLowerCase() {
     return this.isAlpha() && this.str__.toLowerCase() === this.str__;
+  }
+
+  function isUpperCase() {
+    return this.isAlpha() && this.str__.toUpperCase() === this.str__;
   }
 
   function Export(str__) {
