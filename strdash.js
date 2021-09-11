@@ -55,11 +55,20 @@ License: MIT
   }
 
   str.prototype = {
+    isEmpty: isEmpty,
+    isNumeric: isNumeric,
     isAlpha: isAlpha,
     isAlphaNumeric: isAlphaNumeric,
-    isNumeric: isNumeric,
   };
 
+  function isEmpty() {
+    return this.str__ === null || this.str__ === undefined ? true : /^[\s\xa0]*$/.test(this.str__);
+  }
+
+  function isNumeric() {
+    return !/[^0-9]/.test(this.str__);
+  }
+  
   function isAlpha() {
     return !/[^0-9a-z\xDF-\xFF]/.test(this.str__.toLowerCase());
   }
@@ -68,12 +77,8 @@ License: MIT
     return !/[^0-9a-z\xDF-\xFF]/.test(this.str__.toLowerCase());
   }
 
-  function isNumeric() {
-    return !/[^0-9]/.test(this.str__);
-  }
-
-  function Export(s) {
-    return new str(s);
+  function Export(str__) {
+    return new str(str__);
   }
 
   return Export;
