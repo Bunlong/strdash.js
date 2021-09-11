@@ -25,10 +25,8 @@ License: MIT
   function initialize(object, str) {
     var str__ = str;
     if (str__ !== null && str__ !== undefined) {
-      if (typeof str__ === 'string')
-        object.str__ = str__;
-      else
-        object.str__ = str__.toString();
+      if (typeof str__ === 'string') object.str__ = str__;
+      else object.str__ = str__.toString();
     } else {
       // null or undefined
       object.str__ = str__;
@@ -56,7 +54,9 @@ License: MIT
 
   str.prototype = {
     isEmpty: function() {
-      return this.str__ === null || this.str__ === undefined ? true : /^[\s\xa0]*$/.test(this.str__);
+      return this.str__ === null || this.str__ === undefined
+        ? true
+        : /^[\s\xa0]*$/.test(this.str__);
     },
     isNumeric: function() {
       return !/[^0-9]/.test(this.str__);
