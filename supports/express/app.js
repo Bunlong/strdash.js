@@ -12,7 +12,8 @@ app.listen(port, () => {
   console.log(str('123').isNumeric());
   console.log(str('abc').isAlpha());
   console.log(str('abc').isAlphaNumeric());
-  console.log(str('Abc').isLowerCase());
+  console.log(str('abc').isLowerCase());
+  console.log(str('ABC').isUpperCase());
 
   console.log(`App listening at http://localhost:${port}`)
 })

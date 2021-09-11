@@ -51,10 +51,17 @@ console.log(str('abc123').isAlphaNumeric());
 // expected output: true
 ```
 
-### 🎀 isLower()
+### 🎀 isLowerCase()
 
 ```js
 console.log(str('abc').isLowerCase());
+// expected output: true
+```
+
+### 🎀 isUpperCase()
+
+```js
+console.log(str('ABC').isUpperCase());
 // expected output: true
 ```
 

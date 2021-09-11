@@ -55,37 +55,25 @@ License: MIT
   }
 
   str.prototype = {
-    isEmpty: isEmpty,
-    isNumeric: isNumeric,
-    isAlpha: isAlpha,
-    isAlphaNumeric: isAlphaNumeric,
-    isLowerCase: isLowerCase,
-    isUpperCase: isUpperCase,
+    isEmpty: function() {
+      return this.str__ === null || this.str__ === undefined ? true : /^[\s\xa0]*$/.test(this.str__);
+    },
+    isNumeric: function() {
+      return !/[^0-9]/.test(this.str__);
+    },
+    isAlpha: function() {
+      return !/[^0-9a-z\xDF-\xFF]/.test(this.str__.toLowerCase());
+    },
+    isAlphaNumeric: function() {
+      return !/[^0-9a-z\xDF-\xFF]/.test(this.str__.toLowerCase());
+    },
+    isLowerCase: function() {
+      return this.isAlpha() && this.str__.toLowerCase() === this.str__;
+    },
+    isUpperCase: function() {
+      return this.isAlpha() && this.str__.toUpperCase() === this.str__;
+    },
   };
-
-  function isEmpty() {
-    return this.str__ === null || this.str__ === undefined ? true : /^[\s\xa0]*$/.test(this.str__);
-  }
-
-  function isNumeric() {
-    return !/[^0-9]/.test(this.str__);
-  }
-  
-  function isAlpha() {
-    return !/[^0-9a-z\xDF-\xFF]/.test(this.str__.toLowerCase());
-  }
-
-  function isAlphaNumeric() {
-    return !/[^0-9a-z\xDF-\xFF]/.test(this.str__.toLowerCase());
-  }
-
-  function isLowerCase() {
-    return this.isAlpha() && this.str__.toLowerCase() === this.str__;
-  }
-
-  function isUpperCase() {
-    return this.isAlpha() && this.str__.toUpperCase() === this.str__;
-  }
 
   function Export(str__) {
     return new str(str__);
