@@ -18,6 +18,29 @@ yarn add strdash --save
 
 If you don't want to use npm or yarn, [strdash.min.js](https://unpkg.com/strdash.js@0.1.0/strdash.min.js) can be downloaded to your project source.
 
+## 📖 Documentation
+
+### 🎀 isNumeric()
+
+```js
+console.log(str('abc').isAlpha());
+// expected output: true
+```
+
+### 🎀 isAlpha()
+
+```js
+console.log(str('abc').isAlpha());
+// expected output: true
+```
+
+### 🎀 isAlphaNumeric()
+
+```js
+console.log(str('abc123').isAlphaNumeric());
+// expected output: true
+```
+
 ## ❗ Issues
 
 If you think any of the `strdash.js` can be improved, please do open a PR with any updates and submit any issues. Also, I will continue to improve this, so you might want to watch/star this repository to revisit.
