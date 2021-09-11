@@ -59,6 +59,7 @@ License: MIT
     isNumeric: isNumeric,
     isAlpha: isAlpha,
     isAlphaNumeric: isAlphaNumeric,
+    isLowerCase: isLowerCase,
   };
 
   function isEmpty() {
@@ -75,6 +76,10 @@ License: MIT
 
   function isAlphaNumeric() {
     return !/[^0-9a-z\xDF-\xFF]/.test(this.str__.toLowerCase());
+  }
+
+  function isLowerCase() {
+    return this.isAlpha() && this.str__.toLowerCase() === this.str__;
   }
 
   function Export(str__) {

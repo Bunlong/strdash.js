@@ -20,10 +20,20 @@ If you don't want to use npm or yarn, [strdash.min.js](https://unpkg.com/strdash
 
 ## 📖 Documentation
 
+### 🎀 isEmpty()
+
+```js
+// Node.js
+const str = require("strdash");
+
+console.log(str('').isEmpty());
+// expected output: true
+```
+
 ### 🎀 isNumeric()
 
 ```js
-console.log(str('abc').isAlpha());
+console.log(str('123').isNumeric());
 // expected output: true
 ```
 
@@ -38,6 +48,13 @@ console.log(str('abc').isAlpha());
 
 ```js
 console.log(str('abc123').isAlphaNumeric());
+// expected output: true
+```
+
+### 🎀 isLower()
+
+```js
+console.log(str('abc').isLowerCase());
 // expected output: true
 ```
 

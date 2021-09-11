@@ -8,10 +8,11 @@ app.get('/', (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(str('123').isEmpty());
+  console.log(str('').isEmpty());
   console.log(str('123').isNumeric());
   console.log(str('abc').isAlpha());
   console.log(str('abc').isAlphaNumeric());
+  console.log(str('Abc').isLowerCase());
 
   console.log(`App listening at http://localhost:${port}`)
 })
