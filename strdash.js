@@ -22,13 +22,13 @@ License: MIT
 })(this, function() {
   'use strict';
 
-  function initialize (object, str) {
+  function initialize(object, str) {
     var str__ = str;
     if (str__ !== null && str__ !== undefined) {
       if (typeof str__ === 'string')
         object.str__ = str__;
       else
-        object.str__ = str__toString();
+        object.str__ = str__.toString();
     } else {
       // null or undefined
       object.str__ = str__;
@@ -41,7 +41,7 @@ License: MIT
       if (object.__defineGetter__) {
         object.__defineGetter__('length', function() {
           return object.str__.length;
-        })
+        });
       } else {
         object.length__ = str__.length;
       }
@@ -57,6 +57,7 @@ License: MIT
   str.prototype = {
     isAlpha: isAlpha,
     isAlphaNumeric: isAlphaNumeric,
+    isNumeric: isNumeric,
   };
 
   function isAlpha() {
@@ -67,9 +68,13 @@ License: MIT
     return !/[^0-9a-z\xDF-\xFF]/.test(this.str__.toLowerCase());
   }
 
+  function isNumeric() {
+    return !/[^0-9]/.test(this.str__);
+  }
+
   function Export(s) {
     return new str(s);
-  };
+  }
 
   return Export;
 });
