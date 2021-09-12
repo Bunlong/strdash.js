@@ -83,6 +83,13 @@ console.log(str('1').toBoolean());
 // expected output: true
 ```
 
+### 🎀 toInt()
+
+```js
+console.log(str('99').toInt());
+// expected output: 99
+```
+
 ## 📜 Changelog
 
 Latest version 0.1.0 (2021-09-12):

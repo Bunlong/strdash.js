@@ -81,6 +81,12 @@ License: MIT
         );
       } else return this.orig__ === true || this.orig__ === 1;
     },
+    toInt: function () {
+      // If the string starts with '0x' or '-0x', parse as hex.
+      return /^\s*-?0x/i.test(this.str__)
+        ? parseInt(this.str__, 16)
+        : parseInt(this.str__, 10);
+    },
   };
 
   function Export(str__) {
