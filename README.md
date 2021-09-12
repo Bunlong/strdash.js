@@ -106,14 +106,12 @@ console.log(str(99).toString());
 
 ## 📜 Changelog
 
-Latest version 0.1.0 (2021-09-12):
+Latest version 0.2.0 (2021-09-14):
 
-* isEmpty()
-* isNumeric()
-* isAlpha()
-* isAlphaNumeric() 
-* isLowerCase()
-* isUpperCase()
+* toBoolean()
+* toInt()
+* toFloat()
+* toString()
 
 Details changes for each release are documented in the [CHANGELOG.md](https://github.com/Bunlong/strdash/blob/master/CHANGELOG.md).
 

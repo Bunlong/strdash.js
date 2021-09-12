@@ -83,6 +83,7 @@ License: MIT
     },
     toInt: function() {
       // If the string starts with '0x' or '-0x', parse as hex.
+      /* eslint radix: 'error' */
       return /^\s*-?0x/i.test(this.str__)
         ? parseInt(this.str__, 16)
         : parseInt(this.str__, 10);
@@ -92,7 +93,7 @@ License: MIT
       if (precision) return parseFloat(num__.toFixed(precision));
       else return num__;
     },
-    toString: function(){
+    toString: function() {
       return this.str__;
     },
   };
