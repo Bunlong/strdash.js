@@ -87,6 +87,11 @@ License: MIT
         ? parseInt(this.str__, 16)
         : parseInt(this.str__, 10);
     },
+    toFloat: function (precision) {
+      var num__ = parseFloat(this.str__);
+      if (precision) return parseFloat(num__.toFixed(precision));
+      else return num__;
+    },
   };
 
   function Export(str__) {

@@ -90,6 +90,13 @@ console.log(str('99').toInt());
 // expected output: 99
 ```
 
+### 🎀 toFloat()
+
+```js
+console.log(str('99').toFloat(2));
+// expected output: 99
+```
+
 ## 📜 Changelog
 
 Latest version 0.1.0 (2021-09-12):

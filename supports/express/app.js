@@ -16,6 +16,7 @@ app.listen(port, () => {
   console.log(str('ABC').isUpperCase());
   console.log(str('yes').toBoolean());
   console.log(str('99').toInt());
+  console.log(str('99').toFloat(2));
 
   console.log(`App listening at http://localhost:${port}`)
 })
