@@ -53,25 +53,33 @@ License: MIT
   }
 
   str.prototype = {
-    isEmpty: function() {
+    isEmpty: function () {
       return this.str__ === null || this.str__ === undefined
         ? true
         : /^[\s\xa0]*$/.test(this.str__);
     },
-    isNumeric: function() {
+    isNumeric: function () {
       return !/[^0-9]/.test(this.str__);
     },
-    isAlpha: function() {
+    isAlpha: function () {
       return !/[^0-9a-z\xDF-\xFF]/.test(this.str__.toLowerCase());
     },
-    isAlphaNumeric: function() {
+    isAlphaNumeric: function () {
       return !/[^0-9a-z\xDF-\xFF]/.test(this.str__.toLowerCase());
     },
-    isLowerCase: function() {
+    isLowerCase: function () {
       return this.isAlpha() && this.str__.toLowerCase() === this.str__;
     },
-    isUpperCase: function() {
+    isUpperCase: function () {
       return this.isAlpha() && this.str__.toUpperCase() === this.str__;
+    },
+    toBoolean: function () {
+      if (typeof this.orig__ === 'string') {
+        var str__ = this.str__.toLowerCase();
+        return (
+          str__ === 'true' || str__ === 'yes' || str__ === 'on' || str__ === '1'
+        );
+      } else return this.orig__ === true || this.orig__ === 1;
     },
   };
 

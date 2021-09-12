@@ -67,6 +67,22 @@ console.log(str('ABC').isUpperCase());
 // expected output: true
 ```
 
+### 🎀 toBoolean()
+
+```js
+console.log(str('true').toBoolean());
+// expected output: true
+
+console.log(str('yes').toBoolean());
+// expected output: true
+
+console.log(str('on').toBoolean());
+// expected output: true
+
+console.log(str('1').toBoolean());
+// expected output: true
+```
+
 ## 📜 Changelog
 
 Latest version 0.1.0 (2021-09-12):
