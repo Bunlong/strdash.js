@@ -73,6 +73,29 @@ License: MIT
     isUpperCase: function() {
       return this.isAlpha() && this.str__.toUpperCase() === this.str__;
     },
+    toBoolean: function() {
+      if (typeof this.orig__ === 'string') {
+        var str__ = this.str__.toLowerCase();
+        return (
+          str__ === 'true' || str__ === 'yes' || str__ === 'on' || str__ === '1'
+        );
+      } else return this.orig__ === true || this.orig__ === 1;
+    },
+    toInt: function() {
+      // If the string starts with '0x' or '-0x', parse as hex.
+      /* eslint radix: 'error' */
+      return /^\s*-?0x/i.test(this.str__)
+        ? parseInt(this.str__, 16)
+        : parseInt(this.str__, 10);
+    },
+    toFloat: function(precision) {
+      var num__ = parseFloat(this.str__);
+      if (precision) return parseFloat(num__.toFixed(precision));
+      else return num__;
+    },
+    toString: function() {
+      return this.str__;
+    },
   };
 
   function Export(str__) {

@@ -67,16 +67,51 @@ console.log(str('ABC').isUpperCase());
 // expected output: true
 ```
 
+### 🎀 toBoolean()
+
+```js
+console.log(str('true').toBoolean());
+// expected output: true
+
+console.log(str('yes').toBoolean());
+// expected output: true
+
+console.log(str('on').toBoolean());
+// expected output: true
+
+console.log(str('1').toBoolean());
+// expected output: true
+```
+
+### 🎀 toInt()
+
+```js
+console.log(str('99').toInt());
+// expected output: 99
+```
+
+### 🎀 toFloat()
+
+```js
+console.log(str('99').toFloat(2));
+// expected output: 99
+```
+
+### 🎀 toString()
+
+```js
+console.log(str(99).toString());
+// expected output: "99"
+```
+
 ## 📜 Changelog
 
-Latest version 0.1.0 (2021-09-12):
+Latest version 0.2.0 (2021-09-14):
 
-* isEmpty()
-* isNumeric()
-* isAlpha()
-* isAlphaNumeric() 
-* isLowerCase()
-* isUpperCase()
+* toBoolean()
+* toInt()
+* toFloat()
+* toString()
 
 Details changes for each release are documented in the [CHANGELOG.md](https://github.com/Bunlong/strdash/blob/master/CHANGELOG.md).
 
