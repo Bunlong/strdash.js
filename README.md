@@ -18,7 +18,7 @@ strdash is available on yarn as well. It can be installed with the following com
 yarn add strdash --save
 ```
 
-If you don't want to use npm or yarn, [strdash.min.js](https://unpkg.com/strdash@0.1.0/strdash.min.js) can be downloaded to your project source.
+If you don't want to use npm or yarn, [strdash.min.js](https://unpkg.com/strdash@0.2.0/strdash.min.js) can be downloaded to your project source.
 
 ## 📖 Documentation
 
